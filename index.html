@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>القرآن الكريم | Quran Quest</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6ecd4;--ink:#0f4c45;--card:#fffaf0;--gold:#b8860b;--line:#d9c48a;--accent:#0f6b5e;--onacc:#fff8e1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b2e2a;--ink:#f4e6b8;--card:#12423b;--gold:#e0b84c;--line:#2f6b61;--accent:#e0b84c;--onacc:#0b2e2a}}
+:root[data-theme="dark"]{--bg:#0b2e2a;--ink:#f4e6b8;--card:#12423b;--gold:#e0b84c;--line:#2f6b61;--accent:#e0b84c;--onacc:#0b2e2a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Amiri',serif;min-height:100%;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23b8860b' stroke-opacity='.18' stroke-width='1.2'%3E%3Cpath d='M40 6l9 21 21-9-9 21 21 9-21 9 9 21-21-9-9 21-9-21-21 9 9-21-21-9 21-9-9-21 21 9z'/%3E%3C/g%3E%3C/svg%3E")}
+header{text-align:center;padding:28px 16px 12px}
+.bism{font-size:clamp(22px,5vw,32px);color:var(--gold)}
+h1{font-family:'Reem Kufi',sans-serif;font-size:clamp(34px,8vw,56px);margin:6px 0;font-weight:700}
+.en{font-family:Georgia,'Times New Roman',serif;font-size:clamp(20px,5vw,30px);letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+.sub{font-size:clamp(20px,4.5vw,28px);font-weight:700;line-height:1.8;color:var(--gold);margin:0}.sub small{font-size:.65em;opacity:.85;font-weight:400}
+.orn{width:200px;max-width:60%;height:14px;margin:12px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent);clip-path:polygon(0 50%,45% 40%,50% 0,55% 40%,100% 50%,55% 60%,50% 100%,45% 60%);}
+main{max-width:1000px;margin:0 auto;padding:12px 14px 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:14px}
+.juz{cursor:pointer;border:2px solid var(--gold);background:var(--card);color:var(--ink);border-radius:70px 70px 14px 14px;padding:14px 8px 12px;
+text-align:center;font-family:inherit;min-height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;transition:transform .15s,box-shadow .15s}
+.juz:hover,.juz:focus-visible{transform:translateY(-4px);box-shadow:0 8px 18px rgba(0,0,0,.25);outline:3px solid var(--accent)}
+.num{font-family:'Reem Kufi',sans-serif;font-size:38px;line-height:1;width:62px;height:62px;display:grid;place-items:center;color:var(--onacc);background:var(--accent);
+clip-path:polygon(50% 0,61% 14%,79% 10%,82% 28%,98% 35%,90% 50%,98% 65%,82% 72%,79% 90%,61% 86%,50% 100%,39% 86%,21% 90%,18% 72%,2% 65%,10% 50%,2% 35%,18% 28%,21% 10%,39% 14%)}
+.w{font-size:20px;font-weight:700}
+.lbl{font-size:15px;opacity:.8}
+.first{background:var(--accent);color:var(--onacc);grid-column:1/-1;justify-self:center;width:min(380px,100%);min-height:90px;border-radius:50px 50px 14px 14px;padding:10px 8px}.first .num{background:var(--onacc);color:var(--accent)}
+.first .w,.first .lbl,.first .num{display:none}
+.ayah{font-size:clamp(17px,4vw,21px);line-height:1.7}.ayah small{font-size:.7em;opacity:.85}
+.chal{font-family:'Reem Kufi',sans-serif;font-size:clamp(18px,4.5vw,24px);font-weight:700}
+.tip{text-align:center;font-size:20px;margin:6px 0 18px}
+dialog{border:3px solid var(--gold);border-radius:90px 90px 20px 20px;background:var(--card);color:var(--ink);padding:34px 22px 22px;width:min(440px,92vw);max-height:92vh;overflow-y:auto;text-align:center;font-family:inherit}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+@media (max-width:360px){.juz{min-height:125px}.num{width:54px;height:54px;font-size:32px}.w{font-size:18px}}
+@media (min-width:900px){.grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:18px}main{max-width:1100px}}
+.big{font-family:'Reem Kufi',sans-serif;font-size:30px;color:var(--gold);margin:0}
+.name{font-size:clamp(34px,9vw,48px);font-weight:700;margin:6px 0}
+.info{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.info div{border:1.5px solid var(--line);border-radius:14px;padding:8px 14px;font-size:20px;min-width:120px}
+.info b{display:block;font-size:15px;opacity:.75;font-weight:400}
+.btn{display:block;width:100%;font-family:'Reem Kufi',sans-serif;font-size:24px;padding:14px;border-radius:16px;border:0;background:var(--accent);color:var(--onacc);text-decoration:none;cursor:pointer;margin-top:10px}
+.row{display:flex;gap:10px}
+.row .btn{background:transparent;color:var(--ink);border:2px solid var(--gold);font-size:20px}
+.row .btn:disabled{opacity:.35;cursor:default}
+.x{background:none;border:0;color:var(--ink);font-size:20px;margin-top:10px;cursor:pointer;font-family:inherit;text-decoration:underline}
+</style>
+</head>
+<body>
+<header>
+<div class="bism">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+<h1>القرآن الكريم</h1>
+<div class="en" dir="ltr">Quran Quest</div>
+<p class="sub">﴿وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ﴾ <small>(القمر: ١٧)</small></p>
+<div class="orn"></div>
+</header>
+<main>
+<div class="grid" id="grid"></div>
+</main>
+
+<dialog id="dlg">
+<p class="big" id="dNum"></p>
+<div class="name" id="dName"></div>
+<div class="info">
+<div><b>يبدأ من سورة</b><span id="dSurah"></span></div>
+<div><b>الآية</b><span id="dAyah"></span></div>
+<div><b>صفحة البداية</b><span id="dPage"></span></div>
+</div>
+<a class="btn" id="dRead" target="_blank" rel="noopener">📖 اقرأ الجزء</a>
+<div class="row">
+<button class="btn" id="prev">▶ السابق</button>
+<button class="btn" id="next">التالي ◀</button>
+</div>
+<button class="x" id="close">إغلاق</button>
+</dialog>
+
+<script>
+var LINKS={30:"https://quran-quest-amma.vercel.app/"}; /* ضع الروابط هنا: {challenge:"https://...", 30:"https://...", 29:"https://..."} */
+var J=[["الم","الفاتحة",1],["سيقول","البقرة",142],["تلك الرسل","البقرة",253],["لن تنالوا","آل عمران",92],["والمحصنات","النساء",24],["لا يحب الله","النساء",148],["وإذا سمعوا","المائدة",83],["ولو أننا","الأنعام",111],["قال الملأ","الأعراف",88],["واعلموا","الأنفال",41],["يعتذرون","التوبة",94],["وما من دابة","هود",6],["وما أبرئ","يوسف",53],["ربما","الحجر",1],["سبحان الذي","الإسراء",1],["قال ألم","الكهف",75],["اقترب للناس","الأنبياء",1],["قد أفلح","المؤمنون",1],["وقال الذين لا يرجون","الفرقان",21],["أمن خلق","النمل",56],["اتل ما أوحي","العنكبوت",46],["ومن يقنت","الأحزاب",31],["وما لي","يس",28],["فمن أظلم","الزمر",32],["إليه يرد","فصلت",47],["حم","الأحقاف",1],["قال فما خطبكم","الذاريات",31],["قد سمع الله","المجادلة",1],["تبارك الذي","الملك",1],["عم يتساءلون","النبأ",1]];
+var ORD=["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن","التاسع","العاشر","الحادي عشر","الثاني عشر","الثالث عشر","الرابع عشر","الخامس عشر","السادس عشر","السابع عشر","الثامن عشر","التاسع عشر","العشرون","الحادي والعشرون","الثاني والعشرون","الثالث والعشرون","الرابع والعشرون","الخامس والعشرون","السادس والعشرون","السابع والعشرون","الثامن والعشرون","التاسع والعشرون","الثلاثون"];
+function go(k){var u=LINKS[k];if(u){window.open(u,"_blank","noopener")}}
+function ar(n){return String(n).replace(/\d/g,function(d){return "٠١٢٣٤٥٦٧٨٩"[d]})}
+function page(n){return n===1?1:20*(n-1)+2}
+var cur=1,grid=document.getElementById("grid"),dlg=document.getElementById("dlg");
+J.forEach(function(j,i){
+ var n=i+1,b=document.createElement("button");
+ b.className="juz";b.setAttribute("aria-label","الجزء "+ORD[i]);
+ b.innerHTML='<span class="num">'+ar(n)+'</span><span class="w">'+j[0]+'</span><span class="lbl">سورة '+j[1]+'</span>';
+ b.onclick=function(){go(n)};
+ grid.insertBefore(b,grid.firstChild);
+ if(n===30){var c=document.createElement("button");c.className="juz first";c.setAttribute("aria-label","التحدي القرآني");c.innerHTML='<span class="chal">🏆 التحدي القرآني</span><span class="ayah">﴿وَفِي ذَٰلِكَ فَلْيَتَنَافَسِ الْمُتَنَافِسُونَ﴾ <small>(المطففين: ٢٦)</small></span>';c.onclick=function(){go("challenge")};grid.insertBefore(c,grid.firstChild)}
+});
+function show(n){
+ cur=n;var j=J[n-1];
+ document.getElementById("dNum").textContent="الجزء "+ar(n);
+ document.getElementById("dName").textContent=j[0];
+ document.getElementById("dSurah").textContent=j[1];
+ document.getElementById("dAyah").textContent=ar(j[2]);
+ document.getElementById("dPage").textContent=ar(page(n));
+ document.getElementById("dRead").href="https://quran.com/juz/"+n;
+ document.getElementById("prev").disabled=n===30;
+ document.getElementById("next").disabled=n===1;
+}
+document.getElementById("prev").onclick=function(){if(cur<30)show(cur+1)};
+document.getElementById("next").onclick=function(){if(cur>1)show(cur-1)};
+document.getElementById("close").onclick=function(){dlg.close()};
+dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+</script>
+</body>
+</html>
